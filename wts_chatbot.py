@@ -115,7 +115,7 @@ def has_new_msg():
     global driver, last_msg
     cur_time = datetime.datetime.now().strftime("%H:%M:%S")
     new_msg = get_new_msg()
-    if len(new_msg) != len(last_msg):
+    if new_msg != last_msg:
         last_msg = new_msg
         print(cur_time,new_msg)
         return True
